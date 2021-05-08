@@ -39,6 +39,7 @@ export default class Home extends Component {
     }
 
     handleSearchChange(e) {
+        e.preventDefault();
         this.setState({ searchTerm: e.target.value, loadingSearch: true }, () => { this.search(e, true) });
     }
 
@@ -75,8 +76,6 @@ export default class Home extends Component {
     search(e, newSearch = true) {
         e.preventDefault();
         const pageNumber = (newSearch) ? 1 : this.state.pageNumber;
-        console.log('pageNum ' + pageNumber)
-        console.log(`https://www.omdbapi.com/?apikey=569ebc5a&s=${this.state.searchTerm}&plot=full&page=${pageNumber}`)
         axios
             .get(
                 `https://www.omdbapi.com/?apikey=569ebc5a&s=${this.state.searchTerm}&plot=full&page=${pageNumber}`
@@ -129,7 +128,7 @@ export default class Home extends Component {
             <div className="home-container fade-in">
                 <Container>
                     <Navbar darkMode={darkMode} onDarkModeOn={this.darkMode.bind(this)}></Navbar>
-                    <SearchBar darkMode={darkMode} handleSearchChange={this.handleSearchChange.bind(this)} ></SearchBar>
+                    <SearchBar darkMode={darkMode} handleSearchChange={this.handleSearchChange.bind(this)} search={this.search.bind(this)} ></SearchBar>
                     <NominationContainer darkMode={darkMode} nominatedMovies={nominatedMovies} removeNomination={this.removeNomination}></NominationContainer>
                     <Pagination darkMode={darkMode} pageNumber={pageNumber} searchTerm={searchTerm} setPage={this.setPage.bind(this)} totalPages={totalPages}></Pagination>
                     <Container className="movie-list-container">

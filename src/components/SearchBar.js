@@ -21,7 +21,7 @@ export default class Home extends Component{
                             Nominate your favourite movies.
                         </Col>
                         <Col className="search-column">
-                            <form className="search">
+                            <form onSubmit={this.props.search} className="search">
                                 <input className="search-bar" type="text" placeholder="🔎 ex. Inception" onChange={this.handleChange}></input>
                             </form>
                         </Col>
