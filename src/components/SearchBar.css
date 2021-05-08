@@ -1,0 +1,27 @@
+.search-container {
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-family: sofia-pro, sans-serif;
+    font-size: min(6vw, 50px);
+    font-style: normal;
+    font-weight: 800;
+    text-align: left;
+}
+
+.search-column {
+    align-self: center;
+    float: right;
+}
+
+.search {
+    padding-top: 2vh;
+}
+
+.search-bar {
+    height: 40px;
+    margin-bottom: 1vh;
+    margin-right: 1vw;
+    width: 100%;
+}

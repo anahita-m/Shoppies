@@ -1,0 +1,32 @@
+.close-button {
+  background-color: #1d222f;
+  border: none;
+  margin-left: 1rem;
+}
+
+.close-button::hover {
+  background-color: #363f57;
+}
+
+.confetti {
+  bottom: 0;
+  left: 0;
+  margin: 0 50%;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  width: 50%;
+  z-index: 2;
+}
+
+.footer {
+  bottom: 0;
+  color: white;
+  left: 0;
+  padding-bottom: 3vh;
+  padding-top: 4vh;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 0;
+}

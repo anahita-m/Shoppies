@@ -1,0 +1,35 @@
+.nom-container-col {
+  display: inline-block;
+  float: none;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+}
+
+.nom-container-col img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.nomination-placeholder-image {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.nom-container-row {
+  flex-wrap: nowrap;
+  margin: 0;
+  margin-bottom: 2vh;
+  margin-top: 1vh;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 991px) {
+  .nom-container-row {
+    flex-wrap: nowrap;
+  }
+  .nom-container-col img {
+    max-width: 150px;
+    width: 150px;
+  }
+}

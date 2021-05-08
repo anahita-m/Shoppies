@@ -1,0 +1,51 @@
+.pagination-button-div {
+  float: right;
+  text-align: right;
+}
+
+.pagination-container {
+  display: inline-block;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.pagination-text {
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.previous, .next {
+  border: none;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  padding: 6px 15px;
+  text-decoration: none;
+}
+
+.previous:hover :enabled, .next:hover :enabled {
+  background-color: rgb(194, 192, 192);
+  color: black;
+}
+
+.previous {
+  background-color: #7195c5;
+  color: rgb(255, 255, 255);
+  margin-right: 10px;
+}
+
+.next {
+  background-color: #54987f;
+  color: white;
+  margin-left: 10px;
+}
+
+.result-text {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.round {
+  border-radius: 50%;
+}

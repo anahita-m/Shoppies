@@ -1,0 +1,59 @@
+.dark-mode-button {
+	font-size: 1.3rem;
+	padding: none;
+}
+
+.light-mode-button {
+	font-size: 2rem;
+	padding: none;
+}
+
+.navbar {
+	align-items: center;
+	display: flex;
+	font-family: myriad-pro-semi-condensed, sans-serif;
+	font-size: 1.3rem;
+	font-style: italic;
+	font-weight: 700;
+	justify-content: space-between;
+	margin-bottom: 8vh;
+	top: 3vh;
+}
+
+.nav-link {
+	color: rgb(116, 117, 117);
+	text-decoration: none;
+	transition: 0.3s all;
+}
+
+.nav-link:hover {
+	color: rgb(110, 110, 110);
+}
+
+.nav-links {
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	list-style: none;
+}
+
+.nav-logo img {
+	width: 70px;
+}
+
+.nav-logo, .nav-logo:hover {
+	color: #000000;
+	font-size: 2rem;
+	text-decoration: none;
+}
+
+@media screen and (max-width:425px) {
+	.nav-link span {
+		font-size: 1rem;
+	}
+	.nav-logo {
+		font-size: 1.2rem;
+	}
+	.nav-logo img {
+		width: 50px;
+	}
+}

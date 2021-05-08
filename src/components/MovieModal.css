@@ -1,0 +1,18 @@
+#imdbLogo {
+  margin-left: 0;
+  width: 40px;
+}
+
+.genre-box {
+  background-color: #9090e4;
+  border-radius: 3px;
+  color: white;
+  font-size: 12px;
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.movie-poster {
+  border-radius: 10px;
+  max-width: 100%;
+}

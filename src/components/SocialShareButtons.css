@@ -1,0 +1,41 @@
+.social_share {
+  color: white;
+  font-family: 'Archivo';
+  font-size: 3.3vh;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0 auto;
+  margin-top: 10%;
+  text-align: center;
+  -webkit-text-stroke-color: #312E50;
+  -webkit-text-stroke-width: 0px;
+  width: 100%;
+}
+
+.thumbnail:hover {
+  box-shadow: 0 0 5px #08c;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.c-network {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+}
+
+.network {
+  display: inline-block;
+  margin: 0.8rem 0.5rem 0.8rem;
+  text-align: center;
+  vertical-align: top;
+}
+
+.network:hover:not(:active) {
+  box-shadow: 5px blue;
+  opacity: 0.75;
+}
