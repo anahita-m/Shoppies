@@ -29,11 +29,11 @@ export default class MovieCard extends Component{
     }
 
     nominate = () => {
-        this.setState({nominatedResult:true}, this.props.newNomination(this.props.movieID))
+        this.setState({nominatedResult:true}, this.props.newNomination(this.props.movieID, this.state.movieData.Title))
     }
 
     removeNomination = () => {
-        this.setState({nominatedResult:false}, this.props.removeNomination(this.props.movieID))
+        this.setState({nominatedResult:false}, this.props.removeNomination(this.props.movieID, this.state.movieData.Title))
     }
 
     render(){

@@ -40,9 +40,11 @@
 	width: 70px;
 }
 
-.nav-logo, .nav-logo:hover {
-	color: #000000;
+.nav-logo {
 	font-size: 2rem;
+	text-decoration: none;
+}
+.nav-logo:hover{
 	text-decoration: none;
 }
 

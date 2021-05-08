@@ -20,6 +20,7 @@ export default class Home extends Component {
             loadingSearch: false,
             moviesList: [],
             nominatedMovies: [],
+            nominatedMovieTitles: [],
             pageNumber: 1,
             searchTerm: '',
             totalPages: 1,
@@ -41,22 +42,34 @@ export default class Home extends Component {
         this.setState({ searchTerm: e.target.value, loadingSearch: true }, () => { this.search(e, true) });
     }
 
-    newNomination = (movieID) => {
+    newNomination = (movieID, movieTitle) => {
         this.setState({
             nominatedMovies: this.state.nominatedMovies.concat(movieID),
-            nominationsLeft: this.state.nominationsLeft - 1
+            nominationsLeft: this.state.nominationsLeft - 1,
+            nominatedMovieTitles: this.state.nominatedMovieTitles.concat(movieTitle)
         });
     }
 
-    removeNomination = (movieID) => {
+    removeNomination = (movieID, movieTitle) => {
         this.setState({
             nominatedMovies: this.state.nominatedMovies.filter(item => item !== movieID),
-            nominationsLeft: this.state.nominationsLeft + 1
+            nominationsLeft: this.state.nominationsLeft + 1,
+            nominatedMovieTitles: this.state.nominatedMovieTitles.filter(item => item !== movieTitle)
         });
     }
 
     restart = () => {
-        this.setState({ moviesList: [], pageNumber: 1, loadingSearch: false, totalPages: 1, totalResults: 0, searchTerm: '', errorMessage: '', nominatedMovies: [] })
+        this.setState({
+            moviesList: [],
+            pageNumber: 1,
+            loadingSearch: false,
+            totalPages: 1,
+            totalResults: 0,
+            searchTerm: '',
+            errorMessage: '',
+            nominatedMovies: [],
+            nominatedMovieTitles: []
+        })
     }
 
     search(e, newSearch = true) {
@@ -108,7 +121,8 @@ export default class Home extends Component {
             pageNumber,
             totalPages,
             nominatedMovies,
-            errorMessage
+            nominatedMovieTitles,
+            errorMessage,
         } = this.state;
 
         return (
@@ -158,7 +172,7 @@ export default class Home extends Component {
                             </div>
                         ]}
                     </Container>
-                    <Footer darkMode={darkMode} nominatedMovies={nominatedMovies} restart={this.restart}></Footer>
+                    <Footer darkMode={darkMode} nominatedMovies={nominatedMovies} nominatedMovieTitles={nominatedMovieTitles} restart={this.restart} ></Footer>
                 </Container>
             </div>
 

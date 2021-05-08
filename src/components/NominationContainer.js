@@ -12,8 +12,8 @@ export default class NominationContainer extends Component{
         this.removeNomination = this.removeNomination.bind(this);
     }
 
-    removeNomination = (movieID) => {
-        this.setState({nominatedResult:false}, this.props.removeNomination(movieID))
+    removeNomination = (movieID, movieTitle) => {
+        this.setState({nominatedResult:false}, this.props.removeNomination(movieID, movieTitle))
     }
 
     newNomination = (movieID) =>{
