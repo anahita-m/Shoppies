@@ -66,7 +66,8 @@ export default class MovieCard extends Component{
                         { nomContainer ?
                         (
                             <div>
-                            <Button id="x" onClick={this.removeNomination}>X</Button>
+                                <Button id="x" onClick={this.removeNomination}>X</Button>
+                                <p style={{whiteSpace:'normal'}} className="movie-title">{Title + ' ' + released}</p>
                             </div>
                         ): 
                         (
