@@ -59,7 +59,7 @@ export default class Footer extends Component{
                     <Confetti active={full} config={config}/>
                 </div>
                 <Button className="restart-button" onClick={this.restart} >Restart</Button>
-                <Button className="close-button" onClick={this.close} variant="secondary">Close</Button>
+                <Button className="close-button" onClick={this.close}>Close</Button>
             </div>
         )
     }

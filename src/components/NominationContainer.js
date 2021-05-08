@@ -28,7 +28,7 @@ export default class NominationContainer extends Component{
           }
         const numArr = numberRange(numNominated+1,6 )
         return(
-            <div style={{backgroundColor: darkMode ? 'rgb(30 29 41)':'#d0cbc0', marginLeft:'1rem', marginRight:'1rem'}}>
+            <div style={{backgroundColor: darkMode ? 'rgb(30 29 41)':'rgb(200 203 218)', marginLeft:'1rem', marginRight:'1rem'}}>
                 <Row className="nom-container-row" style={{zIndex:'0'}}>
                     {nominatedMovies.map((movie, index) => (
                         <Col className="nom-container-col">
@@ -39,12 +39,12 @@ export default class NominationContainer extends Component{
                         <Col className="nom-container-col fade-in" key={num}>
                             {darkMode ? 
                             (
-                                <img className='nomination-placeholder-image' alt="placeholder for nominated movie" src="https://imgur.com/z8UAV98.png"></img>
+                                <img className='nomination-placeholder-image' alt="placeholder for nominated movie" src="https://imgur.com/8b1pDFP.png"></img>
                             ): 
                             (
-                                <img className='nomination-placeholder-image' alt="placeholder for nominated movie" src="https://imgur.com/BN2Twhs.png"></img>
+                                <img className='nomination-placeholder-image' alt="placeholder for nominated movie" src="https://imgur.com/nZiq4pO.png"></img>
                             )}
-                            <p className="nomination-count" style={{marginBottom:'0rem'}}>{num}</p>
+                            <p style={{color: darkMode ? 'white' : 'black', marginBottom:'0rem'}} className="nomination-count">{num}</p>
                         </Col>
                     ))}
                 </Row>

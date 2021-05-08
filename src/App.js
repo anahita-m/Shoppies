@@ -20,7 +20,7 @@ export default class App extends Component {
     const darkMode = this.state.darkMode;
 
     return (
-      <div className="App" style={{backgroundColor: darkMode? 'rgb(21 22 27)': '#f3eddf'}}>
+      <div className="App" style={{backgroundColor: darkMode? 'rgb(21 22 27)':'rgb(228 233 255)'}}>
         <Container style={{minHeight:'100vh'}}>
           <Router>
             <Switch>
