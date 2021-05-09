@@ -2,26 +2,33 @@
 
 ![https://imgur.com/Kze86EY.png](https://imgur.com/Kze86EY.png)
 
-# Project Overview
+# Project Overview 🎞️
 
-This project is my submission for Shopify's 2021 Frontend Development Internship. As someone who has mostly worked in backend development, I was at first considering applying for the backend internshp but as a huge film buff (hahaha i said film instead of movies so you already know) I couldn't resist taking on the frontend challenge after reading the prompt. My experience in frontend is fairly limited outside of 1 or 2 small projects but I really enjoyed working on this challenge in React and it gave me an opportunity to learn something new which is always fun. In addition to learning a lot on the job during this challenge, all my work got wiped out around 4 am on Friday (2 days before submission) after I'd already spent close to a week on it so after a brief moment of considering not applying, I started from scratch again at 5 am Friday and armed with my one week of knowledge was able to get back up to speed by Saturday morning. This experience has really boosted my confidence in being able to learn quickly and I'm excited to continue learn and work in frontend after this.
+This project is my submission for [Shopify's 2021 Frontend Development Internship](https://docs.google.com/document/d/1SdR9rQpocsH5rPTOcxr9noqHRld5NJlylKO9Hf94U8U/edit#heading=h.py0wnvufbhj3).
 
-## Project Website
+As someone who has mostly worked in backend development, I was at first considering applying for the backend internship but as a huge film buff (hahaha i said film instead of movies so you already know) I couldn't resist taking on the frontend challenge after reading the prompt. My experience in frontend is fairly limited outside of 1 or 2 small projects but I really enjoyed working on this challenge in React and it gave me an opportunity to learn something new which is always fun. 
+
+In addition to learning a lot on the job during this challenge, all my work got wiped out around 4 am on Friday (2 days before submission) after I'd already spent close to a week on it so after a brief moment of considering not applying, I started from scratch again at 5 am Friday and armed with my one week of knowledge was able to get back up to speed by Saturday morning which I'm pretty proud of. This experience has really boosted my confidence in being able to learn quickly and I'm excited to continue learning and working in frontend dev after this.
+
+## Project Website 🍿
 https://shoppies-2021-fall.herokuapp.com/
 
-## Demo
+## Demo 🎥
 https://user-images.githubusercontent.com/43353141/117557518-24aeec00-b039-11eb-856b-b113bb9cf6c2.mov
 
-## Implemented Features
-- On hover nomination and remove buttons
-- Pagination for search results
-- Modal popups for more information on movies
+## Implemented Features 🎬
+- Dynamic search 🔎
+- Pagination for search results 📄
+- Light mode and dark mode 🌞 🌒
+- Resizing on different screens and a horizontal scrollable container for nominated movies on small screens 📱
+- On hover nomination and remove buttons which update and disable based off current nominations 🖱️
+- Modal popups for more information on movies 🎬
   - Displays movie title, plot, genre, director(s), writer(s), imdb + rotten tomatoes ratings
-- Social share buttons
-- Animation on loading movie cards, search results, and completing 5 nominations
-- Pop up footer on completion of 5 nominations with confetti animation
+- Animation on loading movie cards, search results, and completing 5 nominations ✨
+- Pop up footer on completion of 5 nominations with confetti animation 🎉
+- Social share buttons 🤝
 
-## Future Improvements
+## Future Improvements 💿
 - Write API calls on server side
 - Add other pages, such as an About page, to give further context to the project. Routing and Navbat has already been set up so it would be very easy to add this in the future.
 - Add server side code for authentication to save nominations to an account
