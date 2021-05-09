@@ -35,6 +35,7 @@ export default class Home extends Component {
     }
 
     showLoadingAnimation(ms){
+        console.log('error ' + this.state.errorMessage)
         setTimeout(() => this.setState({loadingSearch: false}), ms)
     }
 
@@ -78,7 +79,7 @@ export default class Home extends Component {
         const pageNumber = (newSearch) ? 1 : this.state.pageNumber;
         axios
             .get(
-                `https://www.omdbapi.com/?apikey=569ebc5a&s=${this.state.searchTerm}&plot=full&page=${pageNumber}`
+                `https://www.omdbapi.com/?apikey=ad8386ea&s=${this.state.searchTerm}&page=${pageNumber}&type=movie`
             )
             .then(res => res.data)
             .then(res => {
