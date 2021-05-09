@@ -19,9 +19,9 @@ export default class SocialShare extends Component {
     render() {
         const nominatedMovieTitles = this.props.nominatedMovieTitles;
         return (
-            <div className="c-network" ref={this.props.ref1}>
+            <div className="c-network">
                 <FacebookShareButton
-                    className="network"
+                    className="network fb-share"
                     url="https://shoppies-2021-fall.herokuapp.com/"
                     quote={`I just nominated ${nominatedMovieTitles} for the 2021 Shoppies!`}
                     hashtag="#shoppies2021">
