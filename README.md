@@ -1,6 +1,6 @@
 # Shoppies - Fall 2021 Shopify Frontend Internship
 
-![https://imgur.com/Kze86EY.png](https://imgur.com/Kze86EY.png)
+![https://imgur.com/Kze86EY.png](https://imgur.com/C7stSNh.png)
 
 # Project Overview 🎞️
 
@@ -14,7 +14,18 @@ In addition to learning a lot on the job during this challenge, all my work got 
 https://shoppies-2021-fall.herokuapp.com/
 
 ## Demo 🎥
+
+### Desktop View
 https://user-images.githubusercontent.com/43353141/117557518-24aeec00-b039-11eb-856b-b113bb9cf6c2.mov
+
+
+
+### Tablet/Mobile View
+Horizontal scroll of nomination container
+
+![iPad-view](https://user-images.githubusercontent.com/43353141/117564542-234de580-b072-11eb-8b41-f7192665ab3f.gif)
+
+
 
 ## Implemented Features 🎬
 - Dynamic search 🔎
@@ -27,6 +38,7 @@ https://user-images.githubusercontent.com/43353141/117557518-24aeec00-b039-11eb-
 - Animation on loading movie cards, search results, and completing 5 nominations ✨
 - Pop up footer on completion of 5 nominations with confetti animation 🎉
 - Social share buttons 🤝
+
 
 ## Future Improvements 💿
 - Write API calls on server side
