@@ -1,6 +1,6 @@
 # Shoppies - Fall 2021 Shopify Frontend Internship
 
-![https://imgur.com/Kze86EY.png](https://imgur.com/Kze86EY.png)
+![https://imgur.com/Kze86EY.png](https://imgur.com/C7stSNh.png)
 
 # Project Overview 🎞️
 
