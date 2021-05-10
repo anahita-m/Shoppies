@@ -87,7 +87,6 @@ export default class MovieCard extends Component{
                             </div>
                         )
                         }
-                        {/* <p className="movie-title">{Title + ' ' + released}</p> */}
                     </div>
                 </div>
             </div>
