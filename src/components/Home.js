@@ -97,7 +97,7 @@ export default function Home(props) {
         const pageNumberChecked = (newSearch) ? 1 : pageNumber;
         axios
             .get(
-                `https://www.omdbapi.com/?apikey=ad8386ea&s=${searchTerm}&page=${pageNumberChecked}&type=movie`
+                `https://www.omdbapi.com/?apikey=3ec097e5&s=${searchTerm}&page=${pageNumberChecked}&type=movie`
             )
             .then(res => res.data)
             .then(res => {

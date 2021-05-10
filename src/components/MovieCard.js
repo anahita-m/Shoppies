@@ -18,7 +18,7 @@ export default class MovieCard extends Component{
     componentDidMount() {
         axios
             .get(
-                `https://www.omdbapi.com/?apikey=ad8386ea&i=${
+                `https://www.omdbapi.com/?apikey=3ec097e5&i=${
                     this.props.movieID
                 }&plot=short`
             )
