@@ -37,7 +37,9 @@ export default function MovieModal(props) {
                             <Row>
                                 <Col style={{ marginTop: '1rem' }}>
                                     <p style={{ fontSize: '1rem' }}>
+                                        <a target="_blank" href={`https://www.imdb.com/title/${props.movieData.imdbID}/`} rel="noopener noreferrer">
                                         <img alt="imdb logo" style={{ width: '2rem' }} id='imdbLogo' src='https://imgur.com/QRN0sEM.png'></img>
+                                        </a>
                                         {'  ' + imdbRating}
                                         {rottenTomatoes ? (
                                             <div style={{ display: 'inline-block' }}>
