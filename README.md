@@ -16,8 +16,8 @@ https://shoppies-2021-fall.herokuapp.com/
 ## Demo 🎥
 
 ### Desktop View
-https://user-images.githubusercontent.com/43353141/117557518-24aeec00-b039-11eb-856b-b113bb9cf6c2.mov
 
+https://user-images.githubusercontent.com/43353141/117601549-4cbf4d80-b114-11eb-98e4-883ec615ee69.mov
 
 
 ### Tablet/Mobile View
@@ -38,6 +38,7 @@ Horizontal scroll of nomination container
   - Displays movie title, plot, genre, director(s), writer(s), imdb + rotten tomatoes ratings
 - Animation on loading movie cards, search results, social share button hover, and completing 5 nominations ✨
 - Pop up footer on completion of 5 nominations with confetti animation 🎉
+- Restart option
 - Social share buttons 🤝
 
 
@@ -45,7 +46,6 @@ Horizontal scroll of nomination container
 - Write API calls on server side
 - Add other pages, such as an About page, to give further context to the project. Routing and Navbat has already been set up so it would be very easy to add this in the future.
 - Add server side code for authentication to save nominations to an account
-- Add localstorage to persist state on browser
 
 # Assignment
 We need a webpage that can search OMDB for movies, and allow the user to save their favourite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
