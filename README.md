@@ -17,7 +17,8 @@ https://shoppies-2021-fall.herokuapp.com/
 
 ### Desktop View
 
-https://user-images.githubusercontent.com/43353141/117601549-4cbf4d80-b114-11eb-98e4-883ec615ee69.mov
+https://user-images.githubusercontent.com/43353141/117603590-22bc5a00-b119-11eb-9005-1b524a0a2675.mov
+
 
 
 ### Tablet/Mobile View
@@ -36,6 +37,7 @@ Horizontal scroll of nomination container
 - On hover nomination and remove buttons which update and disable based off current nominations 🖱️
 - Modal popups for more information on movies 🎬
   - Displays movie title, plot, genre, director(s), writer(s), imdb + rotten tomatoes ratings
+  - imdb logo links to imdb page
 - Animation on loading movie cards, search results, social share button hover, and completing 5 nominations ✨
 - Pop up footer on completion of 5 nominations with confetti animation 🎉
 - Restart option
