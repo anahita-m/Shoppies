@@ -31,11 +31,12 @@ Horizontal scroll of nomination container
 - Dynamic search 🔎
 - Pagination for search results 📄
 - Light mode and dark mode 🌞 🌒
+- Nominations are persisted using local storage ✅
 - Resizing on different screens and a horizontal scrollable container for nominated movies on small screens 📱
 - On hover nomination and remove buttons which update and disable based off current nominations 🖱️
 - Modal popups for more information on movies 🎬
   - Displays movie title, plot, genre, director(s), writer(s), imdb + rotten tomatoes ratings
-- Animation on loading movie cards, search results, and completing 5 nominations ✨
+- Animation on loading movie cards, search results, social share button hover, and completing 5 nominations ✨
 - Pop up footer on completion of 5 nominations with confetti animation 🎉
 - Social share buttons 🤝
 
@@ -72,6 +73,6 @@ There is a lot to be improved on here, you can polish the required features by c
 
 If you need inspiration, here are examples of what you can work on. If you work on these ideas, we recommend choosing only one or two.
 
-- Save nomination lists if the user leaves the page
+- Save nomination lists if the user leaves the page ✅
 - Animations for loading, adding/deleting movies, notifications ✅
 - Create shareable links ✅
