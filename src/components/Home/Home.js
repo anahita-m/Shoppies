@@ -1,14 +1,13 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Ring } from 'react-spinners-css';
-import Footer from './Footer.js';
-import MovieCard from './MovieCard.js';
-import Navbar from './Navbar';
-import NominationContainer from './NominationContainer.js';
-import Pagination from './Pagination.js';
-import SearchBar from './SearchBar.js';
-import { useLocalStorage } from '../hooks/useLocalStorage';
+import Footer from '../Footer/Footer.js';
+import MovieCard from '../MovieCard/MovieCard';
+import Navbar from '../Navbar/Navbar.js';
+import NominationContainer from '../NominationContainer/NominationContainer.js';
+import Pagination from '../Pagination/Pagination.js';
+import SearchBar from '../SearchBar/SearchBar';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 import './Home.css'
 
 export default function Home(props) {
@@ -33,12 +32,12 @@ export default function Home(props) {
         props.darkMode(darkMode);
     }
 
-    // set mode and pass to App.js to set correct background color
+    // show loading animation temporarily when search results are loading
     function showLoadingAnimation(ms) {
         setTimeout(() => setLoadingSearch(false), ms)
     }
 
-    // handle change from search bar and set search term and start loader animation
+    // handle change from search bar, set search term,  and start loader animation
     function handleSearchChange(e) {
         e.preventDefault();
         if(e && e.target.value!== undefined && e.target.value !== null){
@@ -95,11 +94,10 @@ export default function Home(props) {
     */
     function search(newSearch = true) {
         const pageNumberChecked = (newSearch) ? 1 : pageNumber;
-        axios
-            .get(
+            fetch(
                 `https://www.omdbapi.com/?apikey=3ec097e5&s=${searchTerm}&page=${pageNumberChecked}&type=movie`
             )
-            .then(res => res.data)
+            .then(res => res.json())
             .then(res => {
                 if (!res.Search) {
                     setMoviesList([]);
@@ -115,6 +113,9 @@ export default function Home(props) {
                 setTotalResults(totalResultsUpdated);
                 setErrorMessage('')
                 setLoadingSearch(false)
+            })
+            .catch((error) => {
+                console.error('Error:', error);
             });
     }
 
@@ -124,6 +125,12 @@ export default function Home(props) {
         setPageNumber(newPageNumber);
     }
 
+    /* 
+    If loading search results, then display a loading animation.
+    Or else, if we have results then display them or if we did
+    not get any matches then show an error message. If there has
+    been no search, then show the most popular movies.
+    */
     return (
         <div className="home-container fade-in">
             <Container>
@@ -144,7 +151,7 @@ export default function Home(props) {
                                     (
                                         <Row>
                                             {moviesList.map((movie) => (
-                                                <Col xs={6} sm={4} md={3}>
+                                                <Col xs={6} sm={4} md={3} key={movie}>
                                                     <MovieCard darkMode={darkMode} key={movie} movieID={movie} newNomination={newNomination} nomContainer={false} nominatedMovies={nominatedMovies} removeNomination={removeNomination}></MovieCard>
                                                 </Col>
                                             ))
@@ -159,7 +166,7 @@ export default function Home(props) {
                                                 (
                                                     <Row>
                                                         {initialList.map(movie => (
-                                                            <Col xs={6} sm={4} md={3}>
+                                                            <Col xs={6} sm={4} md={3} key={movie}>
                                                                 <MovieCard darkMode={darkMode} key={movie} movieID={movie} newNomination={newNomination} nomContainer={false} nominatedMovies={nominatedMovies} removeNomination={removeNomination}></MovieCard>
                                                             </Col>
                                                         ))

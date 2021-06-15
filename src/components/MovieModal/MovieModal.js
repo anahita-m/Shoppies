@@ -23,6 +23,13 @@ export default function MovieModal(props) {
         rottenTomatoes = (Ratings.length >= 2) ? true : false;
     }
 
+    /*
+    This is the implementation of the pop up movie modals that come up
+    when a user clicks on the 'More Info' button. The movie poster,
+    movie title, release year, short plot,genre(s), director, actor(s), 
+    and ratings (imdb + rotten tomatoes) are displayed to provide the 
+    user with additional informaiton.
+    */
     return (
         <Container className="fade-in">
             <Button onClick={() => setShowHide(!showHide)} className="hoverinfo" id="more-button">More Info</Button>

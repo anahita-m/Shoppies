@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import MovieModal from './MovieModal.js'
+import MovieModal from '../MovieModal/MovieModal.js'
 import './MovieCard.css'
 import {Button} from 'react-bootstrap';
 
@@ -16,16 +15,14 @@ export default class MovieCard extends Component{
     }
 
     componentDidMount() {
-        axios
-            .get(
-                `https://www.omdbapi.com/?apikey=3ec097e5&i=${
-                    this.props.movieID
-                }&plot=short`
-            )
-            .then(res => res.data)
-            .then(res => {
-                this.setState({ movieData: res });
-            });
+        fetch(`https://www.omdbapi.com/?apikey=3ec097e5&i=${this.props.movieID}&plot=short`)
+        .then(res => res.json())
+        .then(res =>{
+            this.setState({movieData: res})
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     }
 
     nominate = () => {
@@ -42,6 +39,7 @@ export default class MovieCard extends Component{
             Released,
         } = this.state.movieData;
 
+        // If the release year is unavailable, then set it to 'N/A'
         var released = '(N/A)';
         if (Released){
             if(Released.split(" ")[2]){
@@ -53,11 +51,19 @@ export default class MovieCard extends Component{
         const nominatedResult = this.props.nominatedMovies.includes(this.props.movieID) && !this.props.nomContainer;
         const full = (this.props.nominatedMovies.length === 5) ? true : false;
 
+        // If there is no movie poster available then set it to an "image unavailable" filler image.
         var Poster = this.state.movieData.Poster;
         if (!Poster || Poster === 'N/A' || Poster === undefined) {
             Poster = 'https://imgur.com/NdiS4Fs.png';
         }
 
+        /*
+        If the movie has been nominated and is being rendered for the nomination
+        container, then it has slightly different css stylings and has an 'X' button for removal.
+        On the other hand,movies in the results section all have a 'More Info'
+        movie modal and a nominate/remove button that is conditionally
+        rendered based off nomination status. 
+        */
         return(
             <div className="movie-card-container fade-in" style={{color: darkMode ? 'white':'black'}}>
                 <div className="image-container">

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import MovieCard from './MovieCard.js'
+import MovieCard from '../MovieCard/MovieCard.js'
 import './NominationContainer.css'
 
 export default function NominationContainer(props) {

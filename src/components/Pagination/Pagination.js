@@ -10,6 +10,11 @@ export default function Pagination(props) {
     const darkMode = props.darkMode;
     const result = (searchTerm.length > 0) ? 'Results:' : 'Most Popular:';
 
+    /*
+    Reset page whenever a user clicks on previous or next page.
+    Disable previous button when we are on the first page of results
+    and disable next button when we are on the last page of results.
+    */
     return (
         <Container className="pagination-container" style={{ color: darkMode ? 'white' : 'black' }} >
             <span className="result-text">

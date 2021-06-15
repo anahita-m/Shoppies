@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import Enzyme, { shallow, configure } from "enzyme";
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+// configure({ adapter: new Adapter() });
+Enzyme.configure({ adapter: new Adapter() });
+
+
+describe("App", () => {
+ it("renders correctly", async () => {
+   shallow(<App />);
+ });
 });

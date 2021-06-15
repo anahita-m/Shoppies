@@ -2,8 +2,8 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import Confetti from 'react-dom-confetti';
 import './Footer.css'
-import Social from './SocialShareButtons.js'
-import { useLocalStorage } from '../hooks/useLocalStorage';
+import Social from '../SocialShareButtons/SocialShareButtons.js'
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 
 export default function Footer(props) {
@@ -28,6 +28,13 @@ export default function Footer(props) {
         colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
     };
 
+    /*
+    This popup footer will notify the user when they have completed 5 nominations.
+    It is hidden until the user completes 5 nominations. It is also accompanied by
+    a confetti animaiton. The user has the option to continue with their current
+    nominations by clicking close and removing a nomination or they can restart the
+    nomination process.
+    */
     return (
         <div className="footer fade-in-footer" style={{ visibility: full && !closed ? 'visible' : 'hidden', backgroundColor: darkMode ? 'rgb(73 76 156)' : 'rgb(36 68 74)' }}>
             <h5>You Have Nominated 5 Movies!</h5>
