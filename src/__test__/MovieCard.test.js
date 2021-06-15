@@ -1,11 +1,7 @@
 import React from "react";
-import waitUntil from 'async-wait-until';
-import nock from 'nock';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { shallow, configure, mount } from "enzyme";
 import MovieCard from "../components/MovieCard/MovieCard"
-import fetchMock from "fetch-mock";
-
 
 configure({ adapter: new Adapter() });
 
